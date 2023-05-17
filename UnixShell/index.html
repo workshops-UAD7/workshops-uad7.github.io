@@ -321,6 +321,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -431,19 +433,14 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#files-and-directories" class="md-nav__link">
     Files and Directories
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#first-steps-manual-pages-and-getting-help" class="md-nav__link">
     First steps: Manual pages and getting help
   </a>
@@ -483,11 +480,16 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -528,6 +530,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Loops_Scripts/" class="md-nav__link">
+        Loops & Shell Scripts
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -553,26 +569,25 @@
 
 
 <h1 id="unix-shell-and-unix-filesystem">Unix Shell and Unix Filesystem<a class="headerlink" href="#unix-shell-and-unix-filesystem" title="Permanent link">&para;</a></h1>
-<h3 id="unix-and-unix-like-operating-systems">Unix and Unix-like operating systems<a class="headerlink" href="#unix-and-unix-like-operating-systems" title="Permanent link">&para;</a></h3>
+<h2 id="unix-and-unix-like-operating-systems">Unix and Unix-like operating systems<a class="headerlink" href="#unix-and-unix-like-operating-systems" title="Permanent link">&para;</a></h2>
 <p>For clarity, <a href="https://en.wikipedia.org/wiki/Unix">Unix</a> is a family of <a href="https://en.wikipedia.org/wiki/Computer_multitasking">multitasking</a>, <a href="https://en.wikipedia.org/wiki/Multi-user_software">multi-user</a> computer operating system. There is a <a href="https://en.wikipedia.org/wiki/Unix-like">large family of Unix-like</a> operating systems.</p>
 <p>Some well-known cases of Unix-like operating systems are <a href="https://en.wikipedia.org/wiki/Linux">Linux</a> and <a href="https://en.wikipedia.org/wiki/Berkeley_Software_Distribution">BSD</a>.</p>
-<h3 id="sessions-in-unixlinux">Sessions in UNIX/Linux<a class="headerlink" href="#sessions-in-unixlinux" title="Permanent link">&para;</a></h3>
+<h2 id="sessions-in-unixlinux">Sessions in UNIX/Linux<a class="headerlink" href="#sessions-in-unixlinux" title="Permanent link">&para;</a></h2>
 <p>To work in a terminal, we need to have a valid <em>username</em>, in order to begin a session via the <code>login</code> command.</p>
 <p>If using <em>VSCode</em> we can launch a new terminal from the "Hamburguer Menu" as shown in the next figure</p>
-<p><img alt="" src="../images/VSCodeNewTerminal.png" /></p>
+<p><img alt="New Terminal" src="../images/VSCodeNewTerminal.png" /></p>
 <p>The new terminal will open in the lower right part of the <em>VSCode interface</em>.</p>
-<p><img alt="" src="../images/VSCodeTerminal.png" /></p>
+<p><img alt="Terminal" src="../images/VSCodeTerminal.png" /></p>
 <p>The terminal is ready for user input.</p>
 <p><img alt="📝" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4dd.svg" title=":memo:" /> To end the session enter the <code>exit</code> command. It will finish the session and close the terminal.</p>
-<h3 id="the-command-shell-or-command-line-interpreter">The Command Shell or Command Line Interpreter<a class="headerlink" href="#the-command-shell-or-command-line-interpreter" title="Permanent link">&para;</a></h3>
+<h2 id="the-command-shell-or-command-line-interpreter">The Command Shell or Command Line Interpreter<a class="headerlink" href="#the-command-shell-or-command-line-interpreter" title="Permanent link">&para;</a></h2>
 <p>In the background a <em>Command shell</em> is running. To find out which shell is active we can type the following command after the <em>system prompt</em> <code>$</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>echo $SHELL
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">echo</span><span class="w"> </span><span class="nv">$SHELL</span>
 </code></pre></div>
 <p>which will return the command shell program, <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)"><code>/bin/bash</code></a>, in the <em>Codespaces</em> terminal. This is <em>Bash</em> (Bourne Again Shell), which is derived from the original shell <a href="https://en.wikipedia.org/wiki/Bourne_shell"><code>/bin/sh</code></a>. In other system environments, maybe you will encounter <a href="https://en.wikipedia.org/wiki/Comparison_of_command_shells">other similar shells</a> (<a href="https://en.wikipedia.org/wiki/C_shell"><code>/bin/csh</code></a>, <a href="https://en.wikipedia.org/wiki/Tcsh"><code>/bin/tcsh</code></a>, <a href="https://en.wikipedia.org/wiki/KornShell"><code>/bin/ksh</code></a>, <a href="https://en.wikipedia.org/wiki/Z_shell"><code>/bin/zsh</code></a>, and others).</p>
 <p>The command shell serves as an intermediary between the user and the <a href="https://en.wikipedia.org/wiki/Kernel_(operating_system)">Operating System Kernel</a>, which controls all the available computer resources.</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Kernel_Layout.svg/380px-Kernel_Layout.svg.png"></p>
-
-<h4 id="read-more-on-the-unix-shell"><a href="https://github.com/clizarraga-UAD7/Workshops/wiki/The-Command-Line-Interface-Shell">Read more on the Unix Shell</a><a class="headerlink" href="#read-more-on-the-unix-shell" title="Permanent link">&para;</a></h4>
+<p><img alt="Kernel Layout" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Kernel_Layout.svg/380px-Kernel_Layout.svg.png" /></p>
+<h3 id="read-more-on-the-unix-shell"><a href="https://github.com/clizarraga-UAD7/Workshops/wiki/The-Command-Line-Interface-Shell">Read more on the Unix Shell</a><a class="headerlink" href="#read-more-on-the-unix-shell" title="Permanent link">&para;</a></h3>
 <h3 id="files-and-directories">Files and Directories<a class="headerlink" href="#files-and-directories" title="Permanent link">&para;</a></h3>
 <p>The <a href="https://en.wikipedia.org/wiki/Unix_filesystem">Unix filesystem</a> is considered as the central component of the operating system. The filesystem provides storage and retrieval for other programs to read them. The filesystem also provides access to other resources, for example the <a href="https://en.wikipedia.org/wiki/Device_file">device files</a>, <a href="https://en.wikipedia.org/wiki/Computer_terminal">terminals</a>, <a href="https://en.wikipedia.org/wiki/Printer_(computing)">printers</a>, <a href="https://en.wikipedia.org/wiki/Computer_mouse">computer mice</a>, and many other.</p>
 <table>
@@ -626,8 +641,7 @@
 </tbody>
 </table>
 <p>The Unix file system is a <em>hierarchical structure</em>, with each directory containing a set of files and subdirectories. The <em>root</em> directory is the top-level directory, and all other directories are below it.</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Standard-unix-filesystem-hierarchy.svg/800px-Standard-unix-filesystem-hierarchy.svg.png?20160622221758"></p>
-
+<p><img alt="Unix Filesystem Hierarchy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Standard-unix-filesystem-hierarchy.svg/800px-Standard-unix-filesystem-hierarchy.svg.png?20160622221758" /></p>
 <p>(<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Standard-unix-filesystem-hierarchy.svg/2560px-Standard-unix-filesystem-hierarchy.svg.png">See a larger image</a>)</p>
 <h3 id="first-steps-manual-pages-and-getting-help">First steps: Manual pages and getting help<a class="headerlink" href="#first-steps-manual-pages-and-getting-help" title="Permanent link">&para;</a></h3>
 <p>In general, almost all Unix systems include their manual pages of system commands.</p>
@@ -741,8 +755,8 @@
 <li><a href="https://explainshell.com/">explainshell.com</a></li>
 </ul>
 <hr />
-<p>Created: 05/13/2023: Updated: 05/15/2023,<br>
-Carlos Lizárraga</p>
+<p>Created: 05/13/2023: Updated: 05/15/2023</p>
+<p>Carlos Lizárraga</p>
 
 
 
