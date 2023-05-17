@@ -451,14 +451,48 @@
     The use of pipes '|','&gt;', 'tee',  and '&gt;&gt; ' in Unix
   </a>
   
+    <nav class="md-nav" aria-label="The use of pipes '|','&gt;', 'tee',  and '&gt;&gt; ' in Unix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipes" class="md-nav__link">
+    Pipes ('|')
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redirection" class="md-nav__link">
+    Redirection ('&gt;')
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tee" class="md-nav__link">
+    tee
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#append-redirection" class="md-nav__link">
+    Append redirection ('&gt;&gt;')
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples_1" class="md-nav__link">
-    Examples
+  <a href="#examples-of-pipes" class="md-nav__link">
+    Examples of pipes
   </a>
   
-    <nav class="md-nav" aria-label="Examples">
+    <nav class="md-nav" aria-label="Examples of pipes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -582,27 +616,27 @@
 </tbody>
 </table>
 <h2 id="the-use-of-pipes-tee-and-in-unix">The use of pipes '|','&gt;', 'tee',  and '&gt;&gt; ' in Unix<a class="headerlink" href="#the-use-of-pipes-tee-and-in-unix" title="Permanent link">&para;</a></h2>
-<p><strong>Pipes ('|')</strong></p>
-<p>A pipe is a way of connecting the output of one command to the input of another command. This allows you to chain together commands and perform complex operations on data.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ls -1 | sort 
+<h3 id="pipes">Pipes ('|')<a class="headerlink" href="#pipes" title="Permanent link">&para;</a></h3>
+<p>A pipe is a way of connecting the output of one command to the input of another command. This allows you to chain together commands and perform complex operations on data.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ls<span class="w"> </span>-1<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>
 </code></pre></div>
-The <code>ls</code> command will list the files in the current directory, and the <code>sort</code> command will sort the list by name. The output of the <code>ls</code> command will be piped to the input of the <code>sort</code> command, so that sort can operate on the list of files.</p>
-<p><strong>Redirection ('&gt;')</strong></p>
-<p>Redirection is a way of changing the destination of a command's output. This can be used to save the output of a command to a file, or to display the output on the screen.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ls -1 &gt; files.txt
+<p>The <code>ls</code> command will list the files in the current directory, and the <code>sort</code> command will sort the list by name. The output of the <code>ls</code> command will be piped to the input of the <code>sort</code> command, so that sort can operate on the list of files.</p>
+<h3 id="redirection">Redirection ('&gt;')<a class="headerlink" href="#redirection" title="Permanent link">&para;</a></h3>
+<p>Redirection is a way of changing the destination of a command's output. This can be used to save the output of a command to a file, or to display the output on the screen.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ls<span class="w"> </span>-1<span class="w"> </span>&gt;<span class="w"> </span>files.txt
 </code></pre></div>
-The ls command will list the files in the current directory, and the output will be redirected to the file files.txt.</p>
-<p><strong>tee</strong></p>
-<p>The tee command is a utility that can be used to copy the output of a command to multiple destinations. This can be useful for logging output to a file, or for sending output to both the screen and a file.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ls -1 | tee files.txt
+<p>The ls command will list the files in the current directory, and the output will be redirected to the file files.txt.</p>
+<h3 id="tee">tee<a class="headerlink" href="#tee" title="Permanent link">&para;</a></h3>
+<p>The tee command is a utility that can be used to copy the output of a command to multiple destinations. This can be useful for logging output to a file, or for sending output to both the screen and a file.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ls<span class="w"> </span>-1<span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>files.txt
 </code></pre></div>
-The <code>ls</code> command will list the files in the current directory, and the output will be sent to both the screen and the file <code>files.txt</code>.</p>
-<p><strong>Append redirection ('&gt;&gt;')</strong></p>
-<p>Append redirection is a way of adding the output of a command to the end of a file. This can be used to append the output of a command to an existing file, or to create a new file with the output of a command.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ls -1 &gt;&gt; files.txt
+<p>The <code>ls</code> command will list the files in the current directory, and the output will be sent to both the screen and the file <code>files.txt</code>.</p>
+<h3 id="append-redirection">Append redirection ('&gt;&gt;')<a class="headerlink" href="#append-redirection" title="Permanent link">&para;</a></h3>
+<p>Append redirection is a way of adding the output of a command to the end of a file. This can be used to append the output of a command to an existing file, or to create a new file with the output of a command.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ls<span class="w"> </span>-1<span class="w"> </span>&gt;&gt;<span class="w"> </span>files.txt
 </code></pre></div>
-The <code>ls</code> command will list the files in the current directory, and the output will be appended to the file <code>files.txt</code>.</p>
-<h2 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">&para;</a></h2>
+<p>The <code>ls</code> command will list the files in the current directory, and the output will be appended to the file <code>files.txt</code>.</p>
+<h2 id="examples-of-pipes">Examples of pipes<a class="headerlink" href="#examples-of-pipes" title="Permanent link">&para;</a></h2>
 <p>Some examples of how pipes, redirection, and <code>tee</code> can be used together:</p>
 <table>
 <thead>
@@ -645,8 +679,8 @@ The <code>ls</code> command will list the files in the current directory, and th
 <li><a href="https://explainshell.com/">explainshell.com</a></li>
 </ul>
 <hr />
-<p>Created: 05/13/2023: Updated: 05/15/2023,<br>
-Carlos Lizárraga</p>
+<p>Created: 05/13/2023: Updated: 05/15/2023</p>
+<p>Carlos Lizárraga</p>
 
 
 
